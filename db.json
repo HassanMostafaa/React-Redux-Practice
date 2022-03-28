@@ -1,0 +1,19 @@
+{
+  "contacts": [
+    {
+      "id": "5ca95d06-27d2-4d7b-99d9-663e6f2e47a3",
+      "name": "Contact One",
+      "number": "0221115454"
+    },
+    {
+      "id": "06096c16-54b7-489b-8f6c-a9c91c4fcbf4",
+      "name": "Contact Two",
+      "number": "0231549816541631"
+    },
+    {
+      "id": "014df226-b148-44e1-99cf-61a180772996",
+      "name": "Contact Three",
+      "number": "1561894185196851"
+    }
+  ]
+}

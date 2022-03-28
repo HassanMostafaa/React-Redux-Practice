@@ -1,0 +1,16 @@
+.counter-area {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.counter-card {
+  background-color: #f4f4f4;
+  box-shadow: 5px 5px 15px #00000015;
+  border: 1px solid rgba(128, 128, 128, 0.11);
+
+  min-width: 300px;
+  padding: 20px;
+}
