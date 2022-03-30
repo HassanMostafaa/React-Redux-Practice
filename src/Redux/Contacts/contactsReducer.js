@@ -4,28 +4,35 @@ import {
   GETT_ALL_USERS,
 } from "./contactsActionTypes";
 import { v4 as uuid } from "uuid";
+import axios from "axios";
 
 const initialState = {
   contacts: [],
 };
+const URL = "http://localhost:3001/contacts";
 
 export const contactsReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_CONTACT:
-      return {
-        ...state,
-        contacts: state.contacts.concat({
-          id: uuid(),
-          name: action.name,
-          number: action.number,
-        }),
-      };
+      axios.post(URL, {
+        id: uuid(),
+        name: action.name,
+        number: action.number,
+      });
+      return state;
+    // contacts: state.contacts.concat({
+    //   id: uuid(),
+    //   name: action.name,
+    //   number: action.number,
+    // }),
 
     case REMOVE_CONTACT:
-      return {
-        ...state,
-        contacts: state.contacts.filter((contact) => contact.id !== action.id),
-      };
+      axios.delete(`${URL}/${action.id}`);
+      return state;
+    //{
+    //   ...state,
+    //   contacts: state.contacts.filter((contact) => contact.id !== action.id),
+    // };
 
     case GETT_ALL_USERS:
       return {

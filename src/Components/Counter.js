@@ -11,6 +11,7 @@ export const Counter = () => {
   return (
     <div className="container">
       <h1>Counter Component</h1>
+      <p>Small practice to setup a working redux app</p>
       <div className="counter-area">
         <div className="counter-card">
           <p>
@@ -18,11 +19,11 @@ export const Counter = () => {
             <span style={{ color: count >= 0 ? "green" : "red" }}>{count}</span>
           </p>
           <button onClick={() => dispatch(increamentCount())}>
-            Increament +1
+            Increment +1
           </button>
 
           <button onClick={() => dispatch(decreamentCount())}>
-            Decreament -1
+            Decrement -1
           </button>
         </div>
       </div>

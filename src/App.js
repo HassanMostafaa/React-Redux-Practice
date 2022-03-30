@@ -5,6 +5,8 @@ import { Nav } from "./Components/Nav";
 import { Counter } from "./Components/Counter";
 import { Provider } from "react-redux";
 import { store } from "./Redux/store";
+
+import { ContactInfo } from "./Components/ContactInfo";
 function App() {
   return (
     <Provider store={store}>
@@ -12,8 +14,9 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/contacts" element={<Contacts />}></Route>
-          <Route path="/counter" element={<Counter />}></Route>
+          <Route path="contacts" element={<Contacts />} />
+          <Route path="contacts/:id" element={<ContactInfo />} />
+          <Route path="counter" element={<Counter />}></Route>
         </Routes>
       </div>
     </Provider>
