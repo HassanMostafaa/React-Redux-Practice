@@ -4,11 +4,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { ContactCard } from "./ContactCard";
 import { addContact, getAllContacts } from "../Redux/rootActions";
 import axios from "axios";
-import { v4 as uuid } from "uuid";
+
 import { Alert, AlertTitle } from "@mui/material";
 
 export const Contacts = () => {
   const contacts = useSelector((state) => state.contactsReducer.contacts);
+  // const redux = useSelector((state) => state);
   const [newContactName, setNewContactName] = useState("");
   const [newContactNumber, setNewContactNumber] = useState(0);
   const [showError, setShowError] = useState(false);
@@ -19,6 +20,8 @@ export const Contacts = () => {
   const fetchContacts = async (URL) => {
     const res = await axios.get(URL);
     const apiContacts = await res.data;
+
+    // console.log(redux);
     dispatch(getAllContacts(apiContacts));
   };
 
@@ -118,14 +121,15 @@ export const Contacts = () => {
             />
           </div>
 
-          {contacts.map((contact, ix) => (
-            <ContactCard
-              key={ix}
-              fetch={fetchContacts}
-              contact={contact}
-              URL={URL}
-            />
-          ))}
+          {contacts &&
+            contacts.map((contact, ix) => (
+              <ContactCard
+                key={ix}
+                fetch={fetchContacts}
+                contact={contact}
+                URL={URL}
+              />
+            ))}
         </div>
       </div>
     </div>

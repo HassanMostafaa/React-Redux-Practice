@@ -13,10 +13,8 @@ a {
   border: 1px solid rgba(128, 128, 128, 0.11);
 
   padding: 20px;
-  width: 43%;
+  width: 30%;
   margin: 0 auto 0px auto;
-  max-height: 500px;
-  overflow-y: scroll;
 }
 .contact-list::-webkit-scrollbar {
   background-color: #f4f4f4;

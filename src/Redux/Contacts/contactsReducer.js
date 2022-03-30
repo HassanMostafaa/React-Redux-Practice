@@ -36,7 +36,6 @@ export const contactsReducer = (state = initialState, action) => {
 
     case GETT_ALL_USERS:
       return {
-        ...state,
         contacts: action.apiContacts,
       };
 

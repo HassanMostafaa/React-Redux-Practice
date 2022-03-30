@@ -11,7 +11,7 @@ export const Counter = () => {
   return (
     <div className="container">
       <h1>Counter Component</h1>
-      <p>Small practice to setup a working redux app</p>
+      <p>Small practice to setup a working redux state</p>
       <div className="counter-area">
         <div className="counter-card">
           <p>
