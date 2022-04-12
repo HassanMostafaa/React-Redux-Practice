@@ -4,7 +4,7 @@ import { BsPersonFill, BsPhone } from "react-icons/bs";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { useDispatch } from "react-redux";
 import { delContact } from "../Redux/rootActions";
-import axios from "axios";
+// import axios from "axios";
 import Avatar from "@mui/material/Avatar";
 import { Link } from "react-router-dom";
 
